@@ -12,7 +12,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="script.js"></script>
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
     
 
   <!--Navbar Section -->
@@ -31,17 +31,10 @@
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav ms-auto">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link active" aria-current="page" href="#">Index</a>
               </li>
-              <li class="nav-item">
+              <li id="aboutbutton" class="nav-item">
                 <a class="nav-link" href="#">About</a>
-
-                <script type="text/javascript">
-                  document.getElementById("loginButton").onclick = function () {
-                      location.href = "loginForm.php";
-                  };
-                </script>
-
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Features</a>
@@ -58,23 +51,19 @@
  <!--End of Navbar Section -->
 
 
-<h1 id="main-h1">My Favorite Movies</h1>
+<h1 id="main-h1">My Favorite Movies</h1> 
 
-
-<form id="myform" action="">
+<form class="myform" id="myform" action="">
     <div class="flexbox-container">
-            <label class="mylabel" id="mylabel" for="myInput">Title </label>
+            <label class="mylabel" id="mylabeltitle" for="myInput">Title </label>
             <input class="form-control me-2" id="myInputSearch" type="search" placeholder="Add a movie" aria-label="Search">
 
-            <label class="mylabel" id="mylabel" for="myInput">Rating </label>
+            <label class="mylabel" id="mylabelrating" for="myInput">Rating </label>
             <input class="form-control me-2" id="myInputRating" type="number" min="1" max="10" placeholder="Choose rating between 1-10" aria-label="Rating">
 
             <button type="button" class="btn btn-success" id="add-row">Add Movie</button>
     </div>
 </form>
-
-
-
 
 
   <div class="container">
@@ -95,31 +84,51 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!--Footer Section -->
+<div class="footer-dark mt-auto ">
+  <footer >
+    
+      <div class="container">
+          <div class="row">
+              <div class="col-sm-6 col-md-3 item">
+                  <h3>Services</h3>
+                  <ul>
+                      <li><a href="#">Web design</a></li>
+                      <li><a href="#">Development</a></li>
+                      <li><a href="#">Hosting</a></li>
+                  </ul>
+              </div>
+              <div class="col-sm-6 col-md-3 item">
+                  <h3>About</h3>
+                  <ul>
+                      <li><a href="#">Call us: 2334 43953</a></li>
+                      <li><a href="#">Email us: Mywebsite@gmail.com</a></li>
+                      <li><a href="#">Meet us: Avenue 22 New York</a></li>
+                  </ul>
+              </div>
+              <div class="col-md-6 item text">
+                  <h3>My website</h3>
+                  <p>Praesent sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac sem lacus. Ut vehicula rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo.</p>
+              </div>
+              <div class="col item social"><a href="#"><i class="fab fa-instagram-square"></i></a><a href="#"><i class="fab fa-snapchat"></i></a><a href="#"><i class="fab fa-twitter"></i></a><a href="#"><i class="fab fa-facebook"></i></a></div>
+          </div>
+                   <p class="copyright">My Website © 2022</p>
+                   <div class="logofooter">
+                      <a  class="navbar-brand" href="#">
+                        <img src="images/logo.png" width="35" height="35" class="d-inline-block align-top" alt="">
+                      </a>
+                  </div>    
+      </div>
+  </footer>
+</div>
 
-
-      
+    
 <!--End of Footer Section -->
 
 </body>
+<script >
+  document.getElementById("aboutbutton").onclick = function () {
+    location.href = "about.html";
+};
+</script>
 </html>
